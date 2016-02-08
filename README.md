@@ -23,7 +23,7 @@ void Search::run() {
 ```
 
         
-        occurrences, then, are found with ForwardSearchFifoQueue, a fixed length FIFO queue:
+        occurrences, then, are found with ForwardSearchFifoQueue::push, a fixed length FIFO queue:
 
 
 ```java
