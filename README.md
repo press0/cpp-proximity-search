@@ -5,7 +5,26 @@
         
         occurrences are ordered by the right hand side terminator keyword
         
-        occurrences are found with ForwardSearchFifoQueue, a FIFO queue of length 'range'
+        the Search algorithm iterates forward over the words, complexity O(N):
+        
+```java
+void Search::run() {
+    for (int i=0; i < fileReader->get_words().size(); i++) {
+        tmp = queue->push(fileReader->get_words()[i]);
+        searchResults.reserve(searchResults.size() + tmp.size());
+        searchResults.insert(searchResults.end(),
+                             std::make_move_iterator(tmp.begin()),
+                             std::make_move_iterator(tmp.end()));
+        print1(parameters->debug, i, tmp);
+    }
+    print2(parameters->debug, fileReader->get_words(), searchResults);
+    cout << searchResults.size() << endl;
+}
+```
+
+        
+        occurrences, then, are found with ForwardSearchFifoQueue, a fixed length FIFO queue:
+
 
 ```java
 vector<pair<string, string>> ForwardSearchFifoQueue::push(string topItem) {
@@ -25,9 +44,7 @@ vector<pair<string, string>> ForwardSearchFifoQueue::push(string topItem) {
 }
 ```
 
-        complexity 
-        
-        O(n*log(n)) depending on the 'range' value
+
 
 **build**
         
