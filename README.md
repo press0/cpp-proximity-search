@@ -1,9 +1,9 @@
 
 **algorithm**
         
-        an occurrence is a keyword terminated sub-list.
+        occurrences are keyword terminated sub-lists.
         
-        occurrences are ordered by the right hand terminators keyword1, keyword2
+        occurrences are ordered by the right hand side terminator keyword
         
         occurrences are found with ForwardSearchFifoQueue, a FIFO queue of length 'range'
 
