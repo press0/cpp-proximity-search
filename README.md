@@ -15,15 +15,13 @@ void Search::run() {
         searchResults.insert(searchResults.end(),
                              std::make_move_iterator(tmp.begin()),
                              std::make_move_iterator(tmp.end()));
-        print1(parameters->debug, i, tmp);
     }
-    print2(parameters->debug, fileReader->get_words(), searchResults);
     cout << searchResults.size() << endl;
 }
 ```
 
         
-        occurrences, then, are found with ForwardSearchFifoQueue::push, a fixed length FIFO queue:
+        occurrences, then, are collected in ForwardSearchFifoQueue::push, a fixed length FIFO queue:
 
 
 ```java
