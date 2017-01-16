@@ -1,0 +1,22 @@
+build
+	standard cmake build, see CMakeLists.txt
+
+tests
+	main the canal 6 input.txt
+	3
+	main the canal 3 input.txt
+	1
+	main a b 13 example.txt
+	19
+	main a b 3 example.txt
+	1
+	main  c b 3 example.txt 
+	3
+	main  c b 13 example.txt 
+	15
+	main  cc b 13 example.txt 
+	0
+	main  ccc b 13 example.txt 
+	10
+
+
